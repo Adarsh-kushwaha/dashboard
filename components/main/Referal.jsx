@@ -22,7 +22,7 @@ const Referal = ({ fee, message }) => {
                         <p className='text-gray-500 text-md'>{message}</p>
                     </div>
                     <div className='flex flex-row items-center justify-between bg-[#242731] p-2 rounded-lg'>
-                        <input type="text" className='bg-transparent text-sm font-semibold p-2 w-full' value={referalLink} />
+                        <input type="text" className='bg-transparent text-sm font-semibold p-2 w-full' value={referalLink} onChange={()=>{}}/>
                         <FaCopy size={21} className="cursor-pointer" />
                     </div>
                 </div>

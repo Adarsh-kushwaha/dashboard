@@ -3,10 +3,11 @@ import { GiWallet } from "react-icons/gi"
 import Banner from './Banner'
 import Referal from './Referal'
 import Rewards from './Rewards'
+import Table from './Table'
 
-const Main = () => {
+const Main = ({data}) => {
   return (
-    <div className='h-screen px-10 mt-4'>
+    <div className=' px-10 mt-4 border-r-2 border-[#242731] h-full'>
       <div className='flex flex-row justify-between items-center cursor-pointer'>
         <div className='flex flex-col gap-1'>
           <p>Section</p>
@@ -29,9 +30,8 @@ const Main = () => {
         <div className='w-50'>
           <Referal fee="12.5% of fee" message="Your referal link for xyz" />
         </div>
-
       </div>
-
+      <Table data={data}/>
     </div>
   )
 }
