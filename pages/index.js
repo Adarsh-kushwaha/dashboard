@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import LeftSidebar from '../components/leftSidebar/LeftSidebar';
 import RightSidebar from '../components/rightSidebar/RightSidebar';
 import Main from '../components/main/Main';
-import { RiMenuUnfoldFill } from "react-icons/ri"
+import { RiMenuUnfoldFill } from "react-icons/ri";
 
 const HomePage = ({ data }) => {
 
-  const [leftSidebar, setLeftSidebar] = useState(true)
+  const [leftSidebar, setLeftSidebar] = useState(true);
 
   return (
     <>
@@ -23,8 +23,14 @@ export default HomePage;
 
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://raw.githubusercontent.com/akshita151199/APIs/main/data");
-  const data = await res.json();
+  let data;
+  try {
+    const res = await fetch("https://raw.githubusercontent.com/akshita151199/APIs/main/data");
+    data = await res.json();
+  } catch (error) {
+    console.log(error)
+
+  }
 
   return {
     props: {

@@ -1,11 +1,14 @@
-import React from 'react'
-import { GiWallet } from "react-icons/gi"
-import Banner from './Banner'
-import Referal from './Referal'
-import Rewards from './Rewards'
-import Table from './Table'
+import React, { useState } from 'react';
+import { GiWallet } from "react-icons/gi";
+import Banner from './Banner';
+import Referal from './Referal';
+import Rewards from './Rewards';
+import Table from './Table';
 
-const Main = ({data}) => {
+const Main = ({ data }) => {
+
+  const [banner, setBanner] = useState(true)
+
   return (
     <div className=' px-10 mt-4 border-r-2 border-[#242731] h-full'>
       <div className='flex flex-row justify-between items-center cursor-pointer'>
@@ -21,7 +24,7 @@ const Main = ({data}) => {
           </div>
         </div>
       </div>
-      <Banner />
+      {banner && <Banner setBanner={setBanner} />}
       <Rewards rewardPrice="$0.26214587" />
       <div className='grid grid-cols-2 gap-4'>
         <div className='w-50'>
@@ -31,7 +34,7 @@ const Main = ({data}) => {
           <Referal fee="12.5% of fee" message="Your referal link for xyz" />
         </div>
       </div>
-      <Table data={data}/>
+      {data ? <Table data={data} /> : <p className='text-center mt-10 text-red-400'>Failed To Load Resource !</p>}
     </div>
   )
 }

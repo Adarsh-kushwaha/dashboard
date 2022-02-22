@@ -1,7 +1,7 @@
-import React from 'react'
-import Button from '../ui/Button'
-import Card from '../ui/Card'
-import { FiExternalLink } from "react-icons/fi"
+import React from 'react';
+import Button from '../ui/Button';
+import Card from '../ui/Card';
+import { FiExternalLink } from "react-icons/fi";
 
 const Rewards = ({ rewardPrice }) => {
     return (
@@ -26,4 +26,4 @@ const Rewards = ({ rewardPrice }) => {
     )
 }
 
-export default Rewards
+export default Rewards;

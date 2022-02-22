@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { FiExternalLink } from "react-icons/fi"
+import { FiExternalLink } from "react-icons/fi";
 import Link from 'next/link';
-import defaultImage from "../../public/logo.png"
+import defaultImage from "../../public/logo.png";
 
 const Table = ({ data }) => {
 
@@ -12,6 +12,7 @@ const Table = ({ data }) => {
     const accountAdd = (address) => `${address.slice(0, 5)}...${address.slice(address.length - 5)}`;
 
     return (
+        
         <div className='mt-4 font-semibold max-w-full'>
             <div className='flex flex-row justify-start items-center gap-4 pt-4'>
                 <div className='flex flex-col gap-1 cursor-pointer'>
@@ -91,4 +92,4 @@ const Table = ({ data }) => {
     )
 }
 
-export default Table
+export default Table;

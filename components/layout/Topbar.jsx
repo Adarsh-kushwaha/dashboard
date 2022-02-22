@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Topbar = () => {
   return (
@@ -6,4 +6,4 @@ const Topbar = () => {
   )
 }
 
-export default Topbar
+export default Topbar;

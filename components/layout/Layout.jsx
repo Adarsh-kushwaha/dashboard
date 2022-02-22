@@ -1,5 +1,5 @@
-import React from 'react'
-import Topbar from './Topbar'
+import React from 'react';
+import Topbar from './Topbar';
 
 const Layout = ({children}) => {
   return (
@@ -10,4 +10,4 @@ const Layout = ({children}) => {
   )
 }
 
-export default Layout
+export default Layout;

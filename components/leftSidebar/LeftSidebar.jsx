@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import NavLinks from './NavLinks'
-import Image from 'next/image'
-import logo from "../../public/logo.png"
-import { RiMenuFoldFill } from "react-icons/ri"
+import React, { useState } from 'react';
+import NavLinks from './NavLinks';
+import Image from 'next/image';
+import logo from "../../public/logo.png";
+import { RiMenuFoldFill } from "react-icons/ri";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { BsFillCircleFill } from "react-icons/bs";
-import { BsGlobe } from "react-icons/bs"
+import { BsGlobe } from "react-icons/bs";
 import Button from "../ui/Button";
 
 
-const LeftSidebar = ({closeLeftSidebar}) => {
+const LeftSidebar = ({ closeLeftSidebar }) => {
 
-    const [toggle, setToggle] = useState(true)
+    const [toggle, setToggle] = useState(true);
 
     return (
         <>
@@ -28,7 +28,7 @@ const LeftSidebar = ({closeLeftSidebar}) => {
                             </div>
                         </div>
                         <NavLinks />
-                        <div className='flex flex-row justify-start gap-4 mt-[140px]'>
+                        <div className='flex flex-row justify-start gap-4 mt-[100px]'>
                             <div className='flex flex-row justify-center gap-4 items-center bg-[#353945] p-2 px-4 rounded-md cursor-pointer '>
                                 <Image src={logo} width="20px" height="20px" />
                                 <p className='font-semibold'>$0.90</p>
@@ -50,14 +50,10 @@ const LeftSidebar = ({closeLeftSidebar}) => {
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-
-
             </div>
         </>
     )
 }
 
-export default LeftSidebar
+export default LeftSidebar;
